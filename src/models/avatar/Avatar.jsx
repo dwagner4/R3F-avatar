@@ -39,9 +39,9 @@ export function Avatar(props) {
   })
 
   useEffect(() => {
-    actions[animation].reset().play();
+    actions[animation].reset().fadeIn(0.5).play();
     return () => {
-      actions[animation].reset().stop()
+      actions[animation].reset().fadeOut(0.5)
     }
   }, [animation])
 
