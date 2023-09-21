@@ -10,9 +10,10 @@ import { useControls } from "leva";
 
 export function Avatar(props) {
   const {animation} = props;
-  const { headFollow, cursorFollow } = useControls({
+  const { headFollow, cursorFollow, wireframe } = useControls({
     headFollow: false,
-    cursorFollow: false
+    cursorFollow: false,
+    wireframe: false
   })
   const group = useRef();
   const { nodes, materials } = useGLTF("models/dean.glb");
@@ -44,6 +45,12 @@ export function Avatar(props) {
       actions[animation].reset().fadeOut(0.5)
     }
   }, [animation])
+
+  useEffect(() => {
+    Object.values(materials).forEach((material) => {
+      material.wireframe = wireframe;
+    })
+  }, [wireframe])
 
   return (
     <group {...props} rotation-x={-Math.PI / 2} ref={group} dispose={null}>
