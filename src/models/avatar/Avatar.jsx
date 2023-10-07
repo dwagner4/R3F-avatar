@@ -16,7 +16,7 @@ export function Avatar(props) {
     wireframe: false
   })
   const group = useRef();
-  const { nodes, materials } = useGLTF("models/dean.glb");
+  const { nodes, materials } = useGLTF("models/dean.glb"); 
 
   const { animations: typingAnimation } = useFBX("animations/Typing.fbx")
   const { animations: standingAnimation } = useFBX("animations/StandingIdle.fbx")

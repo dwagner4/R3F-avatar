@@ -13,8 +13,8 @@ export const Experience = () => {
   return (
     <>
       <OrbitControls />
-      <Cube position={[ -1, 0, 1]} tag="Joe" fsm="shapeRef1" friend="shapeRef2"/>
-      <Cube position={[ 1, 0, -1]} tag = "fart" fsm="shapeRef2" friend="shapeRef1"/>
+      <Cube position={[ -1, 0, -2]} tag="Joe" fsm="shapeRef1" friend="shapeRef2"/>
+      <Cube position={[ 1, 0, -2]} tag = "fart" fsm="shapeRef2" friend="shapeRef1"/>
       <Sky />
       <Environment preset="sunset" />
       <group position-y={-1}>
